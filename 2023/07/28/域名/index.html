@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>信息收集 | Hexo</title>
+  <meta name="keywords" content=" 域名 ">
+  <meta name="description" content="信息收集 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="信息收集概述1,目的 渗透的本质是信息收集，信息收集也叫做资产收集。 信息收集是渗透测试的前期主要工作，是非常重要的环节，收集足够多的信息才能方便接下来的测试，信息收集主要是收集网站的域名信息、子域名信息、目标网站信息、目标网站真实IP、敏感&#x2F;目录文件、开放端口和中间件信息等等。通过各种渠道和手段尽可能收集到多的关于这个站点的信息，有助于我们更多的去找到渗透点，突破口。  2,收集内容（">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信息收集">
+<meta property="og:url" content="http://example.com/2023/07/28/%E5%9F%9F%E5%90%8D/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="信息收集概述1,目的 渗透的本质是信息收集，信息收集也叫做资产收集。 信息收集是渗透测试的前期主要工作，是非常重要的环节，收集足够多的信息才能方便接下来的测试，信息收集主要是收集网站的域名信息、子域名信息、目标网站信息、目标网站真实IP、敏感&#x2F;目录文件、开放端口和中间件信息等等。通过各种渠道和手段尽可能收集到多的关于这个站点的信息，有助于我们更多的去找到渗透点，突破口。  2,收集内容（">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/qiuyou12/image1/main/img/image-20230731160237829.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qiuyou12/image1/main/img/image-20230731162541403.png">
+<meta property="article:published_time" content="2023-07-28T13:22:00.000Z">
+<meta property="article:modified_time" content="2023-07-31T09:06:35.395Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="域名">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/qiuyou12/image1/main/img/image-20230731160237829.png">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>John Doe</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/qiuyou12"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(3)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="工具">
+            <i class="fold iconfont icon-right"></i>
+            工具
+            <small>(3)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;信息收集">
+            
+            信息收集
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;hexo">
+            
+            hexo
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;markdown语法">
+            
+            markdown语法
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="3">
+<input type="hidden" id="yelog_site_word_count" value="5.8k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>域名</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 工具 信息收集 "
+           href="/2023/07/28/%E5%9F%9F%E5%90%8D/"
+           data-tag="域名"
+           data-author="" >
+            <span class="post-title" title="信息收集">信息收集</span>
+            <span class="post-date" title="2023-07-28 21:22:00">2023/07/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2023/07/27/%E5%88%A9%E7%94%A8github%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="利用github搭建hexo博客">利用github搭建hexo博客</span>
+            <span class="post-date" title="2023-07-27 09:00:00">2023/07/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 markdown语法 "
+           href="/2023/07/26/markdown%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="markdown的使用说明">markdown的使用说明</span>
+            <span class="post-date" title="2023-07-26 17:49:29">2023/07/26</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-域名" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">信息收集</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="工具">工具</a> > 
+            
+            <a  data-rel="工具&lt;---&gt;信息收集">信息收集</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">域名</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2023-07-31 17:06:35'>2023-07-28 21:22</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:2.2k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E6%A6%82%E8%BF%B0"><span class="toc-text">信息收集概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%9B%AE%E7%9A%84"><span class="toc-text">1,目的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%94%B6%E9%9B%86%E5%86%85%E5%AE%B9"><span class="toc-text">2,收集内容</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E5%9F%9F%E5%90%8D%E4%BF%A1%E6%81%AF"><span class="toc-text">收集域名信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Whois%E6%9F%A5%E8%AF%A2"><span class="toc-text">1, Whois查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%8F%8D%E6%9F%A5"><span class="toc-text">2,反查</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%A4%87%E6%A1%88%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2"><span class="toc-text">3,备案信息查询</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E5%AD%90%E5%9F%9F%E5%90%8D%E4%BF%A1%E6%81%AF"><span class="toc-text">收集子域名信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%AD%90%E5%9F%9F%E5%90%8D%E6%9F%A5%E8%AF%A2%E7%BD%91%E7%AB%99"><span class="toc-text">1,子域名查询网站</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%9F%9F%E4%BC%A0%E9%80%81%E6%BC%8F%E6%B4%9E"><span class="toc-text">2,域传送漏洞</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AD%90%E5%9F%9F%E5%90%8D%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7"><span class="toc-text">3,子域名检测工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%9E%9A%E4%B8%BE"><span class="toc-text">4,搜索引擎枚举</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E7%AC%AC%E4%B8%89%E6%96%B9%E8%81%9A%E5%90%88%E5%BA%94%E7%94%A8%E6%9E%9A%E4%B8%BE"><span class="toc-text">5.第三方聚合应用枚举</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E8%AF%81%E4%B9%A6%E9%80%8F%E6%98%8E%E5%BA%A6%E5%85%AC%E5%BC%80%E6%9B%B0%E5%BF%97%E6%9E%9A%E4%B8%BE"><span class="toc-text">6,证书透明度公开曰志枚举</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DNS-To-IP"><span class="toc-text">DNS To IP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-ping"><span class="toc-text">1,.ping</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-nslookup"><span class="toc-text">2,nslookup</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-dig%E5%B7%A5%E5%85%B7"><span class="toc-text">3,dig工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-dnsenum%E5%B7%A5%E5%85%B7"><span class="toc-text">4,dnsenum工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E7%AB%99%E9%95%BF%E4%B9%8B%E5%AE%B6"><span class="toc-text">5,站长之家</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-CDN%E5%AF%B9%E6%9F%A5%E8%AF%A2%E5%9F%9F%E5%90%8D%E5%AF%B9%E5%BA%94IP%E5%9C%B0%E5%9D%80%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">6,CDN对查询域名对应IP地址的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-CDN%E6%8A%80%E6%9C%AF%E6%A6%82%E8%BF%B0"><span class="toc-text">1.CDN技术概述</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%AF%B9%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">2.对渗透测试的影响</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%88%A4%E6%96%AD%E5%8F%8A%E7%BB%95%E8%BF%87CDN%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">3.判断及绕过CDN的方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E9%AA%8C%E8%AF%81%E8%8E%B7%E5%8F%96%E7%9A%84IP"><span class="toc-text">4.验证获取的IP</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP%E6%9F%A5%E8%AF%A2"><span class="toc-text">IP查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IP-%E6%9F%A5%E8%AF%A2"><span class="toc-text">IP 查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8CIP%E7%BD%91%E7%AB%99%E6%9F%A5%E8%AF%A2"><span class="toc-text">同IP网站查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IP-whois%E6%9F%A5%E8%AF%A2"><span class="toc-text">IP whois查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IP-To-Location"><span class="toc-text">IP To Location</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF"><span class="toc-text">收集敏感信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E7%B1%BB%E5%9E%8B"><span class="toc-text">敏感信息类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%94%B6%E9%9B%86%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF"><span class="toc-text">通过搜索引擎收集敏感信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%92%9F%E9%81%93%E4%B9%8B%E7%9C%BCzoomeye"><span class="toc-text">钟道之眼zoomeye</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shodan"><span class="toc-text">shodan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87BurpSuite%E6%94%B6%E9%9B%86%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF"><span class="toc-text">通过BurpSuite收集敏感信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E2%80%94%E2%80%94%E6%8C%87%E7%BA%B9%E4%BF%A1%E6%81%AF"><span class="toc-text">网站信息收集——指纹信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CMS%E5%8F%8AWeb%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7"><span class="toc-text">CMS及Web指纹识别的必要性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#netcraft-Extension%E6%8F%92%E4%BB%B6"><span class="toc-text">netcraft Extension插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Wappalyzer%E6%8F%92%E4%BB%B6"><span class="toc-text">Wappalyzer插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%87%E7%94%A8%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB"><span class="toc-text">采用工具进行指纹识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%87%E7%94%A8%E7%BD%91%E7%AB%99%E6%9F%A5%E8%AF%A2%E6%8C%87%E7%BA%B9"><span class="toc-text">采用网站查询指纹</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E7%BD%91%E7%AB%99%E7%9B%AE%E5%BD%95%E5%8F%8A%E9%9A%90%E8%97%8F%E7%9A%84%E6%95%8F%E6%84%9F%E6%96%87%E4%BB%B6"><span class="toc-text">收集网站目录及隐藏的敏感文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E7%9A%84%E5%8F%8A%E5%B8%B8%E8%A7%81%E5%B7%A5%E5%85%B7"><span class="toc-text">目的及常见工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%A1%E5%89%91%E5%90%8E%E5%8F%B0%E6%89%AB%E6%8F%8F%E7%8F%8D%E8%97%8F%E7%89%88"><span class="toc-text">御剑后台扫描珍藏版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DirBuster"><span class="toc-text">DirBuster</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6"><span class="toc-text">社会工程学</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="信息收集概述"><a href="#信息收集概述" class="headerlink" title="信息收集概述"></a>信息收集概述</h2><h4 id="1-目的"><a href="#1-目的" class="headerlink" title="1,目的"></a>1,目的</h4><ul>
+<li>渗透的本质是信息收集，信息收集也叫做资产收集。</li>
+<li>信息收集是渗透测试的前期主要工作，是非常重要的环节，收集足够多的信息才能方便接下来的测试，信息收集主要是收集网站的域名信息、子域名信息、目标网站信息、目标网站真实IP、敏感&#x2F;目录文件、开放端口和中间件信息等等。通过各种渠道和手段尽可能收集到多的关于这个站点的信息，有助于我们更多的去找到渗透点，突破口。</li>
+</ul>
+<h4 id="2-收集内容"><a href="#2-收集内容" class="headerlink" title="2,收集内容"></a>2,收集内容</h4><p>（1）收集目标网站服务器信息：域名、子域名、CNAME、cdn、真实IP、系统类型、版本等；</p>
+<p>（2）识别并收集目标网站指纹信息：CMS、中间件、网页编程语言等及其通用漏洞调查收集；</p>
+<p>（3）扫描并收集目标网站目录结构：一些文件可以访问获得信息、后台管理页面位置、日志位置等；</p>
+<p>（4）网站的敏感信息：</p>
+<ul>
+<li>whois信息、姓名、备案、邮箱、电话反查（邮箱丢社工库，社工准备等）；</li>
+<li>弱口令扫描、密码爆破等（如针对系统管理员、网站后台管理员、数据库管理员等）；</li>
+<li>网站源码是否泄露等，如github源码。</li>
+</ul>
+<p>（5）收集目标服务器主机端口信息：不同端口提供不同的攻击思路和方向；</p>
+<p>（6）网络防护信息：网络边界设备或网络节点设备，如有没有防火墙，有没有IPS、IDS或WAF，网络行为管理，全流量分析。y</p>
+<p><strong>服务器的配置信息和网站的敏感信息，其中包括域名及子域名信息、目标网站系统、CMS指纹、目标网站真实IP 、开放的端口等</strong></p>
+<h2 id="收集域名信息"><a href="#收集域名信息" class="headerlink" title="收集域名信息"></a>收集域名信息</h2><h4 id="1-Whois查询"><a href="#1-Whois查询" class="headerlink" title="1, Whois查询"></a>1, Whois查询</h4><ul>
+<li><p>Whois简介</p>
+<ul>
+<li>Whois是一个标准的互联网协议， 可用于收集<strong>域名注册信息</strong>，注册的域名、IP地址等信息。简单来说， Whois就是一个用于查询域名是否己被注册以及注册域名的详细信息的数据库（如域名所有人、域名注册商）。</li>
+<li>在Whois查询中，得到注册人的姓名和邮箱信息通常对测试个人站点非常有用，因为我们可以通过搜索引擎和社交网络挖掘出域名所有人的很多信息。对中小站点而言，域名所有人往往就是管理员。</li>
+</ul>
+</li>
+<li><p>在线Whois查询</p>
+<p><a target="_blank" rel="noopener" href="https://tool.chinaz.com/">站长工具 - 站长之家 (chinaz.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://whois.cloud.tencent.com/domain">域名信息查询 - 腾讯云 (tencent.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://whois.aliyun.com/">whois查询_域名查询_域名交易_阿里云企航(原万网)-阿里云 (aliyun.com)</a></p>
+</li>
+</ul>
+<p>非国内：<a target="_blank" rel="noopener" href="https://www.whois.com/whois/">Free Whois Lookup - Whois IP Search &amp; Whois Domain Lookup | Whois.com</a></p>
+<h4 id="2-反查"><a href="#2-反查" class="headerlink" title="2,反查"></a>2,反查</h4><p>除了用whois查询以外，还可以进行反查<br>（1）邮箱反查：这个邮箱曾经注册过哪些域名。<br>（2）注册人反查：这个注册人曾经注册过哪些域名。<br>（3）电话反查：这个电话曾经注册过哪些域名。</p>
+<h4 id="3-备案信息查询"><a href="#3-备案信息查询" class="headerlink" title="3,备案信息查询"></a>3,备案信息查询</h4><p><a target="_blank" rel="noopener" href="https://www.beianx.cn/">ICP备案查询网 - 网站备案查询 - 工信部域名备案查询实时数据 (beianx.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.tianyancha.com/">天眼查-商业查询平台_企业信息查询_公司查询_工商查询_企业信用信息系统 (tianyancha.com)</a></p>
+<h2 id="收集子域名信息"><a href="#收集子域名信息" class="headerlink" title="收集子域名信息"></a>收集子域名信息</h2><p>子域名也就是二级域名， 是指顶级域名下的域名。假设我们的目标网络规模比较大，直接从主域入手显然是很不理智的， 因为对于这种规模的目标， 一般其主域都是重点防护区域，所以不如先进入目标的某个子域，然后再想办法迂回接近真正</p>
+<h4 id="1-子域名查询网站"><a href="#1-子域名查询网站" class="headerlink" title="1,子域名查询网站"></a>1,子域名查询网站</h4><p>VirusTotal：<a target="_blank" rel="noopener" href="https://www.virustotal.com/gui/home/search">VirusTotal - Home</a></p>
+<p>DNSdumpster：<a target="_blank" rel="noopener" href="https://dnsdumpster.com/">DNSdumpster.com - dns recon and research, find and lookup dns records</a></p>
+<h4 id="2-域传送漏洞"><a href="#2-域传送漏洞" class="headerlink" title="2,域传送漏洞"></a>2,域传送漏洞</h4><p>待补充</p>
+<h4 id="3-子域名检测工具"><a href="#3-子域名检测工具" class="headerlink" title="3,子域名检测工具"></a>3,子域名检测工具</h4><p>Layer子域名挖掘机</p>
+<h4 id="4-搜索引擎枚举"><a href="#4-搜索引擎枚举" class="headerlink" title="4,搜索引擎枚举"></a>4,搜索引擎枚举</h4><p>可以利用Google语法搜索子域名，例如使用site:baidu.com语法搜索百度旗下的子域名。</p>
+<p><img src="https://raw.githubusercontent.com/qiuyou12/image1/main/img/image-20230731160237829.png" alt="image-20230731160237829"></p>
+<h4 id="5-第三方聚合应用枚举"><a href="#5-第三方聚合应用枚举" class="headerlink" title="5.第三方聚合应用枚举"></a>5.第三方聚合应用枚举</h4><p>待补充</p>
+<h4 id="6-证书透明度公开曰志枚举"><a href="#6-证书透明度公开曰志枚举" class="headerlink" title="6,证书透明度公开曰志枚举"></a>6,证书透明度公开曰志枚举</h4><p>证书透明度（Certificate Transparency, CT）是证书授权机构（CA）的一个项目，证书授权机构会将每个SSL&#x2F;TLS证书发布到公共日志中。一个SSL&#x2F;TLS证书通常包含域名、子域名和邮件地址，这些也经常成为攻击者非常希望获得的有用信息。查找某个域名所属证书的最简单的方法就是使用搜索引擎搜索一些公开的CT日志。<br>（1）首推好用网站：<a target="_blank" rel="noopener" href="https://crt.sh/">https://crt.sh</a><br>（2）次推好用网站：<a target="_blank" rel="noopener" href="https://censys.io/">https://censys.io/</a><br>（3）其他网站：<a target="_blank" rel="noopener" href="https://phpinfo.me/domain">https://phpinfo.me/domain</a></p>
+<h2 id="DNS-To-IP"><a href="#DNS-To-IP" class="headerlink" title="DNS To IP"></a>DNS To IP</h2><p>通过DNS解析找到IP地址，主要有以下几种方法:</p>
+<h4 id="1-ping"><a href="#1-ping" class="headerlink" title="1,.ping"></a>1,.ping</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ping 域名  <span class="comment">//得到的地址属于非权威解答</span></span><br><span class="line">ping baidu.com</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-nslookup"><a href="#2-nslookup" class="headerlink" title="2,nslookup"></a>2,nslookup</h4><h4 id="3-dig工具"><a href="#3-dig工具" class="headerlink" title="3,dig工具"></a>3,dig工具</h4><h4 id="4-dnsenum工具"><a href="#4-dnsenum工具" class="headerlink" title="4,dnsenum工具"></a>4,dnsenum工具</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dnsenum 要解析的域名<span class="comment">//会自动检测域传送漏洞</span></span><br><span class="line">dnsenum baidu.com</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-站长之家"><a href="#5-站长之家" class="headerlink" title="5,站长之家"></a>5,站长之家</h4><p><a target="_blank" rel="noopener" href="https://tool.chinaz.com/">站长工具 - 站长之家 (chinaz.com)</a></p>
+<h4 id="6-CDN对查询域名对应IP地址的影响"><a href="#6-CDN对查询域名对应IP地址的影响" class="headerlink" title="6,CDN对查询域名对应IP地址的影响"></a>6,CDN对查询域名对应IP地址的影响</h4><h5 id="1-CDN技术概述"><a href="#1-CDN技术概述" class="headerlink" title="1.CDN技术概述"></a>1.CDN技术概述</h5><p><strong>定义</strong>：CDN的全称是Content DeliveryNetwork，即<strong>内容分发网络。</strong><br><strong>简介</strong>：CDN是构建在现有网络基础之上的智能虚拟网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。<br><strong>基本原理</strong>：CDN的基本思路是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。利用节点缓存技术，通过在网络各处放置节点服务器，构成了在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据<strong>网络流量</strong>和<strong>各节点的连接</strong>、<strong>负载状况</strong>以及<strong>到用户的距离</strong>和<strong>响应时间</strong>等综合信息将用户的请求重新导向离用户最近的服务节点上。<br><strong>目的</strong>：是使用户可就近取得所需内容，解决 Internet网络拥挤的状况，提高用户访问网站的响应速度。</p>
+<h5 id="2-对渗透测试的影响"><a href="#2-对渗透测试的影响" class="headerlink" title="2.对渗透测试的影响"></a>2.对渗透测试的影响</h5><p>cdn会隐藏服务器真实的ip地址，无法对目标网站的操作系统进行渗透，但cdn站点又可以理解为是目标站点的镜像站点（大多数都是静态cdn加速），拥有相同的网站架构，且cdn服务器可与站点服务器进行交互，因此<strong>sql注入</strong>，<strong>xss</strong>等漏洞的挖掘并不受太大影响。</p>
+<h5 id="3-判断及绕过CDN的方法"><a href="#3-判断及绕过CDN的方法" class="headerlink" title="3.判断及绕过CDN的方法"></a>3.判断及绕过CDN的方法</h5><ul>
+<li><p>判断方法<br> 通过超级ping的网站可以看到CDN的解析情况，可以浏览器搜索“超级ping”打开对应网页输入域名进行搜索，或直接在浏览器输入“<a target="_blank" rel="noopener" href="https://ping.chinaz.com/+%E7%9B%AE%E6%A0%87%E5%9F%9F%E5%90%8D%E2%80%9D%E7%9A%84%E6%96%B9%E5%BC%8F%E8%BF%9B%E8%A1%8C%E6%A3%80%E7%B4%A2%E3%80%82%E4%BB%A5%E7%99%BE%E5%BA%A6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%BA%E4%BE%8B%EF%BC%8Chttps://ping.chinaz.com/www.baidu.com">https://ping.chinaz.com/+目标域名”的方式进行检索。以百度WEB服务器为例，https://ping.chinaz.com/www.baidu.com</a><br> 返回结果有多个，说明启用了CND技术。</p>
+<p> <img src="https://raw.githubusercontent.com/qiuyou12/image1/main/img/image-20230731162541403.png" alt="image-20230731162541403"></p>
+</li>
+<li><p>绕过CDN寻找真实IP的方法</p>
+</li>
+</ul>
+<h5 id="4-验证获取的IP"><a href="#4-验证获取的IP" class="headerlink" title="4.验证获取的IP"></a>4.验证获取的IP</h5><p>找到目标的真实IP以后，如何验证其真实性呢？如果是Web，最简单的验证方法是直接尝试用IP访问，看看响应的页面是不是和访问域名返回的一样；或者在目标段比较大的情况下，借助类似Masscan的工具批扫描对应IP段中所有开了80、443、8080端口的IP，然后逐个尝试IP访问，观察响应结果是否为目标站点。</p>
+<h2 id="IP查询"><a href="#IP查询" class="headerlink" title="IP查询"></a>IP查询</h2><h4 id="IP-查询"><a href="#IP-查询" class="headerlink" title="IP 查询"></a>IP 查询</h4><p><a target="_blank" rel="noopener" href="https://tool.chinaz.com/">站长工具 - 站长之家 (chinaz.com)</a></p>
+<h4 id="同IP网站查询"><a href="#同IP网站查询" class="headerlink" title="同IP网站查询"></a>同IP网站查询</h4><h4 id="IP-whois查询"><a href="#IP-whois查询" class="headerlink" title="IP whois查询"></a>IP whois查询</h4><h4 id="IP-To-Location"><a href="#IP-To-Location" class="headerlink" title="IP To Location"></a>IP To Location</h4><p>（1）查询 IP经纬度<br>网站：<a target="_blank" rel="noopener" href="https://www.maxmind.com/en/home%EF%BC%8C%E6%9F%A5%E8%AF%A2">https://www.maxmind.com/en/home，查询</a> IP经纬度<br>（2）得到IP经纬度后，通过GPS查询物理位置</p>
+<h2 id="收集敏感信息"><a href="#收集敏感信息" class="headerlink" title="收集敏感信息"></a>收集敏感信息</h2><h3 id="敏感信息类型"><a href="#敏感信息类型" class="headerlink" title="敏感信息类型"></a>敏感信息类型</h3><h3 id="通过搜索引擎收集敏感信息"><a href="#通过搜索引擎收集敏感信息" class="headerlink" title="通过搜索引擎收集敏感信息"></a>通过搜索引擎收集敏感信息</h3><h3 id="钟道之眼zoomeye"><a href="#钟道之眼zoomeye" class="headerlink" title="钟道之眼zoomeye"></a>钟道之眼zoomeye</h3><h3 id="shodan"><a href="#shodan" class="headerlink" title="shodan"></a>shodan</h3><h3 id="通过BurpSuite收集敏感信息"><a href="#通过BurpSuite收集敏感信息" class="headerlink" title="通过BurpSuite收集敏感信息"></a>通过BurpSuite收集敏感信息</h3><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h2 id="网站信息收集——指纹信息"><a href="#网站信息收集——指纹信息" class="headerlink" title="网站信息收集——指纹信息"></a>网站信息收集——指纹信息</h2><h3 id="CMS及Web指纹识别的必要性"><a href="#CMS及Web指纹识别的必要性" class="headerlink" title="CMS及Web指纹识别的必要性"></a>CMS及Web指纹识别的必要性</h3><h3 id="netcraft-Extension插件"><a href="#netcraft-Extension插件" class="headerlink" title="netcraft Extension插件"></a>netcraft Extension插件</h3><h3 id="Wappalyzer插件"><a href="#Wappalyzer插件" class="headerlink" title="Wappalyzer插件"></a>Wappalyzer插件</h3><h3 id="采用工具进行指纹识别"><a href="#采用工具进行指纹识别" class="headerlink" title="采用工具进行指纹识别"></a>采用工具进行指纹识别</h3><h3 id="采用网站查询指纹"><a href="#采用网站查询指纹" class="headerlink" title="采用网站查询指纹"></a>采用网站查询指纹</h3><h2 id="收集网站目录及隐藏的敏感文件"><a href="#收集网站目录及隐藏的敏感文件" class="headerlink" title="收集网站目录及隐藏的敏感文件"></a>收集网站目录及隐藏的敏感文件</h2><h3 id="目的及常见工具"><a href="#目的及常见工具" class="headerlink" title="目的及常见工具"></a>目的及常见工具</h3><h3 id="御剑后台扫描珍藏版"><a href="#御剑后台扫描珍藏版" class="headerlink" title="御剑后台扫描珍藏版"></a>御剑后台扫描珍藏版</h3><h3 id="DirBuster"><a href="#DirBuster" class="headerlink" title="DirBuster"></a>DirBuster</h3><h2 id="社会工程学"><a href="#社会工程学" class="headerlink" title="社会工程学"></a>社会工程学</h2>
+      
+       
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
