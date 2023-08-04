@@ -6,23 +6,18 @@
   <meta name="keywords" content=" hexo ">
   <meta name="description" content="利用github搭建hexo博客 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="信息收集概述1,目的 渗透的本质是信息收集，信息收集也叫做资产收集。 信息收集是渗透测试的前期主要工作，是非常重要的环节，收集足够多的信息才能方便接下来的测试，信息收集主要是收集网站的域名信息、子域名信息、目标网站信息、目标网站真实IP、敏感&#x2F;目录文件、开放端口和中间件信息等等。通过各种渠道和手段尽可能收集到多的关于这个站点的信息，有助于我们更多的去找到渗透点，突破口。  2,收集内容（">
+<meta name="description" content="信息收集已知根域baidu.com 1,baidu.com ip2,子域名 ip3,敏感信息（api接口，路径，js，住址，电话，通信软件….）4，所有网站的指纹5，测试网站是否具有漏洞poc，exp 已知单位中国电信1，有哪些跟域2，分别有什么子域名2,子域名 ip3，公司拓扑结构3,敏感信息（api接口，路径，js，住址，电话，通信软件….）4，所有网站的指纹5，测试网站是否具有漏洞poc，e">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息收集">
-<meta property="og:url" content="http://example.com/2023/07/28/%E5%9F%9F%E5%90%8D/index.html">
+<meta property="og:url" content="http://example.com/2023/07/28/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%86%85%E5%AE%B9/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="信息收集概述1,目的 渗透的本质是信息收集，信息收集也叫做资产收集。 信息收集是渗透测试的前期主要工作，是非常重要的环节，收集足够多的信息才能方便接下来的测试，信息收集主要是收集网站的域名信息、子域名信息、目标网站信息、目标网站真实IP、敏感&#x2F;目录文件、开放端口和中间件信息等等。通过各种渠道和手段尽可能收集到多的关于这个站点的信息，有助于我们更多的去找到渗透点，突破口。  2,收集内容（">
+<meta property="og:description" content="信息收集已知根域baidu.com 1,baidu.com ip2,子域名 ip3,敏感信息（api接口，路径，js，住址，电话，通信软件….）4，所有网站的指纹5，测试网站是否具有漏洞poc，exp 已知单位中国电信1，有哪些跟域2，分别有什么子域名2,子域名 ip3，公司拓扑结构3,敏感信息（api接口，路径，js，住址，电话，通信软件….）4，所有网站的指纹5，测试网站是否具有漏洞poc，e">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/qiuyou12/image1/main/img/image-20230731160237829.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/qiuyou12/image1/main/img/image-20230731162541403.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/qiuyou12/image1/main/img/image-20230731181306318.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/qiuyou12/image1/main/img/image-20230731180810817.png">
 <meta property="article:published_time" content="2023-07-28T13:22:00.000Z">
-<meta property="article:modified_time" content="2023-07-31T10:21:58.268Z">
+<meta property="article:modified_time" content="2023-07-31T11:46:10.936Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="域名">
+<meta property="article:tag" content="信息">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/qiuyou12/image1/main/img/image-20230731160237829.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -97,7 +92,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(3)</small>
+                <small>(5)</small>
             
         </div>
     </li>
@@ -109,7 +104,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(3)</small>
+            <small>(4)</small>
         </div>
         
             <ul class="sub hide">
@@ -119,7 +114,7 @@
         <div data-rel="工具&lt;---&gt;信息收集">
             
             信息收集
-            <small>(1)</small>
+            <small>(2)</small>
         </div>
         
     </li>
@@ -156,6 +151,21 @@
     
         
             
+                
+    <li>
+        <div data-rel="博客搭建">
+            
+            博客搭建
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
         
     
         
@@ -179,8 +189,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="3">
-<input type="hidden" id="yelog_site_word_count" value="7.3k">
+<input type="hidden" id="yelog_site_posts_number" value="5">
+<input type="hidden" id="yelog_site_word_count" value="7.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -226,11 +236,19 @@
     <div class="tag-wrapper">
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>域名</a>
+                <i class="iconfont icon-tag"></i><a>信息</a>
             </li>
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HEXO</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>img上传</a>
             </li>
         
     </div>
@@ -241,9 +259,27 @@
     <nav id="title-list-nav">
         
         
+        <a id="top" class="全部文章 博客搭建 "
+           href="/2023/07/27/typora+PicGo%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"
+           data-tag="HEXO,img上传"
+           data-author="" >
+            <span class="post-title" title="typora+PicGo图片上传">typora+PicGo图片上传</span>
+            <span class="post-date" title="2023-07-27 17:06:05">2023/07/27</span>
+        </a>
+        
+        
         <a  class="全部文章 工具 信息收集 "
-           href="/2023/07/28/%E5%9F%9F%E5%90%8D/"
-           data-tag="域名"
+           href="/2023/07/28/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%86%85%E5%AE%B9/"
+           data-tag="信息"
+           data-author="" >
+            <span class="post-title" title="信息收集">信息收集</span>
+            <span class="post-date" title="2023-07-28 21:22:00">2023/07/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 信息收集 "
+           href="/2023/07/28/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%A4%A7%E6%A6%82/"
+           data-tag="信息"
            data-author="" >
             <span class="post-title" title="信息收集">信息收集</span>
             <span class="post-date" title="2023-07-28 21:22:00">2023/07/28</span>
